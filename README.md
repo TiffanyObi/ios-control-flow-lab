@@ -224,29 +224,43 @@ default:
 Create a switch statement that will convert a number grade into a letter grade as shown below:
 
 ```swift
-Numeric Score 	Letter Grade
-100 	A+
-90 - 99	A
-80 - 89	B
-70 - 79 	C
-65 - 69 	D
-Below 65 	F
-```
-***
+let grade = 60
 
+switch grade {
+    
+case 100:
+    print("A+")
+case 90..<100:
+    print("A")
+case 80..<90:
+    print("B")
+case 70..<80:
+    print("C")
+case 65..<70:
+    print("D")
+case 0..<65:
+    print("F")
+default:
+    print("Your Grade is so special that there is no letter to represent it")
+}```
+***
+```
 ## Question 11
 
 What is wrong with the block of code below?  Correct it so it behaves as expected.
 
 ```swift
+/////Answer:
 let firstName = "Peter"
-
+var lastName: String = ""
 if firstName == "Peter" {
- let lastName = "Gabriel"
+ lastName = "Gabriel"
 } else if firstName == "Phil" {
- let lastName = "Collins"
+lastName = "Collins"
 }
 let fullName = firstName + " " + lastName
+
+
 ```
 ***
 
@@ -255,8 +269,35 @@ let fullName = firstName + " " + lastName
 Write an if statement that prints out what decade of life someone is in (e.g "You are in your twenties). Then, write it as a switch statement.
 
 ```swift
-let nameAndBirthYear: (String, Int)
+            /////Answer:
+let nameAndBirthYear = ("Ant" , 1978)
 
+if 1960..<1970 ~= nameAndBirthYear.1 {
+    print("\(nameAndBirthYear.0) is in his 50's")
+} else if 1970..<1980 ~= nameAndBirthYear.1 {
+        print("\(nameAndBirthYear.0) is in his 40's")
+} else if 1980..<1990 ~= nameAndBirthYear.1 {
+    print("\(nameAndBirthYear.0) is in his 30's")
+} else if 1990..<2000 ~= nameAndBirthYear.1 {
+    print("\(nameAndBirthYear.0) in in his 20's")
+} else {
+print("sorry")
+}
+
+let nameAndBirthYear = ("Ant" , 1978)
+
+switch nameAndBirthYear.1 {
+case 1960..<1970:
+    print("\(nameAndBirthYear.0) is in is 50's")
+case 1970..<1980:
+    print("\(nameAndBirthYear.0) is in his 40's")
+    case 1980..<1990:
+    print("\(nameAndBirthYear.0) is in his 30's")
+    case 1980..<1990:
+    print("\(nameAndBirthYear.0) is in his 20's")
+default:
+        print("")
+}
 ```
 ***
 
@@ -279,16 +320,21 @@ case 42:
  print("The answer to life, the universe and everything")
 default:
  print("Some uninteresting number")
+ 
+ ////Answer: The answer to life, the universe and everything
 ```
 What happens when you change number to:
 
--a. 365?
+-a. 365? - Days in Year
 
--b. 1024?
+-b. 1024? - Bytes in a Kilobyte
 
--c. 65?
+-c. 65? - Some in interesting number
+
 
 What happens when you remove the default clause?
+
+the code will not compile. it needs the default. 
 
 ***
 
@@ -304,12 +350,37 @@ b. Add an else-condition where message changes to say it's a mid-size town.
 c. Convert your final if-else statement to a switch statement.
 
 ```swift
-var population: Int = 10000
+var population: Int = 100000
 var message = String()
 
 if population > 10000 {
  message = "\(population) is a large town"
-}
+ } 
+ 
+        ////Answer:
+var population: Int = 70000
+var message = String()
+
+        if population > 100000 {
+            message = "\(population) is a large town"
+        } else if population < 100000 && population > 50000 {
+           message = "\(population) is a medium size town"
+        } else {
+           message = "\(population) is a small - size town"
+        }
+        print(message)
+        ...................................................
+        switch population {
+        case 100000...:
+            message = "\(population) is a large town"
+        case 50000..<100000:
+            message = "\(population) is a medium size town"
+        case 1..<50000:
+            message = "\(population) is a small size town"
+        default:
+            print("Ya too big or too small.. sorry")
+        }
+        
 ```
 ***
 
@@ -319,9 +390,20 @@ Complete the code below so that it prints out and tells the user if the sum of t
 
 a. Using a conditional
 
+            ////Answer:
+let myTuple: (Int, Int) = (5, 10)
+
+if myTuple.0 + myTuple.1 == 15 {
+    print("Yup! It's 15!")
+}else {
+    print("Nope sorry! try again")
+}
+
 b. Using a switch statement
 
 ```swift
 let myTuple: (Int, Int) = (5, 10)
+
+
 ```
 ***
