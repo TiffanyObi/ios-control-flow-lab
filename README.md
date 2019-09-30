@@ -97,6 +97,7 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 ```swift
 let currentWeather = "rain"
 
+            ////Answer:
 switch currentWeather {
 case: "Rain"
 print(" Make Sure You Have Your Umbrella!")
@@ -115,9 +116,12 @@ Given the first name and last name of a Fellow, declare `fullName` variable and 
 let firstName = "John"
 let lastName = "Appleseed"
 
-// enter code below
+            /////Answer:
+let fullName = firstName + " " + lastName
+print("The Fellow's full name is \(fullName)")
 
-let fullName = "/(firstName)
+
+
 ```
 
 ***
@@ -127,12 +131,26 @@ let fullName = "/(firstName)
 Convert the if/else statement below into a switch statement.
 
 ```swift
+
+
 if temperatureInFahrenheit <= 40 {
  print("It's cold out.")
 } else if temperatureInFahrenheit >= 85 {
  print("It's really warm.")
 } else {
  print("Weather is moderate.")
+}
+
+var temperatureInFahrenheit = 60
+            
+            /////Answer:
+switch temperatureInFahrenheit {
+case (0...41):
+    print("It's Cold out")
+case (85...1000):
+    print("It's really warm")
+default:
+    print("Weather is Modedrate")
 }
 
 //Re-written statement here
@@ -146,12 +164,24 @@ if temperatureInFahrenheit <= 40 {
 Complete the following code so that "You win!" is printed.
 
 ```swift
+
+var: 22 
 if {
  print("You win!")
 } 
 else {
  print("You lose!")
 }
+
+var Chances = 23
+
+if Chances % 2 == 0 {
+ print("You win!")
+}
+else {
+ print("You lose!")
+}
+
 ```
 ***
 
@@ -162,21 +192,29 @@ Given a variable called numberOfSides, write code using a switch so that it prin
 var numberOfSides = 6
 
 ```swift
-Example 1:
+var numberOfSides = 9
 
-Input:
-var numberOfSides = 4
-
-Output:
-Square
-
-Example 2:
-
-Input:
-var numberOfSides = 2
-
-Output:
-Error
+switch numberOfSides {
+case (3):
+    print("Triangle")
+case (4):
+    print("Square")
+case (5):
+    print("Pentagon")
+case (6):
+    print("Hexagon")
+case (7):
+    print("Heptagon")
+case (8):
+    print("Octogon")
+case (9):
+    print("Nonagon")
+case(10):
+    print("Decagon")
+default:
+    print("ERROR")
+    
+}
 
 ```
 ***
