@@ -26,12 +26,10 @@ if conditionTwo {
  print("C")
 }
 print("D")
-```
 
-- A
-- B
-- C
-- D
+            ///// Answer: A, C, D
+            
+```
 
 ***
 ## Question 2
@@ -48,14 +46,10 @@ switch appInfo {
  default:
  print("I'm not quite sure what you are looking at")
 }
+
+            ///// Answer: myCoolApp hasn't released yet 
+                          Thanks for looking at myCoolApp  
 ```
-
-- appInfo.0 hasn't released yet
-- myCoolApp hasn't released yet
-- Thanks for looking at myCoolApp!
-- I'm not quite sure what you are looking at
-- It will give a compile-time error
-
 ***
 ## Question 3
 
@@ -73,13 +67,8 @@ case is Double:
 default:
  print("D")
 }
+            ///// Answer: D
 ```
-
-- A
-- B
-- C
-- D
-
 ***
 ## Question 4
 
@@ -96,13 +85,10 @@ case "skittles":
 case "snickers":
  print("Hungry? Grab a Snickers")
 }
+
+            ///// Answer: No parentheses around                     the conditions
+                          No default case in the switch statement
 ```
-
-- No parentheses around the conditions
-- No opening and closing brackets in each of the cases
-- No default case in the switch statement
-- No print statement right outside the switch statement
-
 ***
 ## Question 5
 
@@ -111,7 +97,13 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 ```swift
 let currentWeather = "rain"
 
-// enter code below
+switch currentWeather {
+case: "Rain"
+print(" Make Sure You Have Your Umbrella!")
+}
+default: 
+print(" This weather is unpredictable sometimes")
+
 ```
 
 ***
@@ -124,6 +116,8 @@ let firstName = "John"
 let lastName = "Appleseed"
 
 // enter code below
+
+let fullName = "/(firstName)
 ```
 
 ***
