@@ -165,17 +165,17 @@ Complete the following code so that "You win!" is printed.
 
 ```swift
 
-var: 22 
-if {
+var chances = 22
+if chances % 2 == 0  {
  print("You win!")
-} 
+}
 else {
  print("You lose!")
 }
 
-var Chances = 23
+var chances2 = 23
 
-if Chances % 2 == 0 {
+if chances2 % 2 == 1 {
  print("You win!")
 }
 else {
@@ -329,7 +329,7 @@ What happens when you change number to:
 
 -b. 1024? - Bytes in a Kilobyte
 
--c. 65? - Some in interesting number
+-c. 65? - Some uninteresting number
 
 
 What happens when you remove the default clause?
